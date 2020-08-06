@@ -8,9 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Simple gem does one thing, and one thing only... Turns funky chars such as [FILL IN HERE] to the proper HTML Encodings such as [FILL IN HERE].}
   gem.homepage      = "https://github.com/jamster/text_cleaner"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files         = Dir['lib/**/*.rb']
+
   gem.name          = "text_cleaner"
   gem.require_paths = ["lib"]
   gem.version       = TextCleaner::VERSION
